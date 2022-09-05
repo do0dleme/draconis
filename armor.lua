@@ -88,3 +88,24 @@ armor:register_armor("draconis:shield_ice_draconic_steel",{
     armor_groups = {fleshy=40},
     damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
+
+-- 3d_armor_gloves support
+
+if minetest.get_modpath("3d_armor_gloves") then
+    armor:register_armor("draconis:gloves_fire_draconic_steel", {
+		description = "Fire-forged Draconic Steel Gauntlets",
+		inventory_image = "draconis_inv_gloves_fire_draconic_steel.png",
+		groups = {armor_hands=1, armor_heal=18, armor_use=100,
+        physics_speed=0.5, physics_gravity=0.05, physics_jump=0.15, armor_fire=1},
+		armor_groups = {fleshy=30},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+    armor:register_armor("draconis:gloves_ice_draconic_steel", {
+		description = "Ice-forged Draconic Steel Gauntlets",
+		inventory_image = "draconis_inv_gloves_icee_draconic_steel.png",
+		groups = {armor_hands=1, armor_heal=18, armor_use=100,
+        physics_speed=0.5, physics_gravity=0.05, physics_jump=0.15, armor_water=1},
+    armor_groups = {fleshy=30},
+    damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+end
